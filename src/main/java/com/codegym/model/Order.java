@@ -21,8 +21,8 @@ public class Order {
     private Long id;
 
     private BigDecimal amount;
-    private Long table_id;
-    private Long user_id;
+//    private Long table_id;
+//    private Long user_id;
 
     @OneToOne
     @JoinColumn(name = "table_id", referencedColumnName = "id", nullable = false)

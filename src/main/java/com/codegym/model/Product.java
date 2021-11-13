@@ -23,7 +23,7 @@ public class Product {
     private String name;
     private BigDecimal price;
     private String status;
-    private Long category_id;
+//    private Long category_id;
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)

@@ -21,8 +21,8 @@ public class OrderDetail {
 
     private Integer quantity;
     private Integer total;
-    private Long product_id;
-    private Long order_id;
+//    private Long product_id;
+//    private Long order_id;
 
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id", nullable = false)
