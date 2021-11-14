@@ -66,6 +66,67 @@
             margin: 40px 0;
         }
 
+
+        /*BUTTON*/
+        @import url(https://fonts.googleapis.com/css?family=BenchNine:700);
+        .snip1582 {
+            background-color: #c47135;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: 'BenchNine', Arial, sans-serif;
+            font-size: 1em;
+            font-size: 22px;
+            line-height: 1em;
+            margin: 15px 40px;
+            outline: none;
+            padding: 12px 40px 10px;
+            position: relative;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .snip1582:before,
+        .snip1582:after {
+            border-color: transparent;
+            -webkit-transition: all 0.25s;
+            transition: all 0.25s;
+            border-style: solid;
+            border-width: 0;
+            content: "";
+            height: 24px;
+            position: absolute;
+            width: 24px;
+        }
+
+        .snip1582:before {
+            border-color: #c47135;
+            border-top-width: 2px;
+            left: 0px;
+            top: -5px;
+        }
+
+        .snip1582:after {
+            border-bottom-width: 2px;
+            border-color: #c47135;
+            bottom: -5px;
+            right: 0px;
+        }
+
+        .snip1582:hover,
+        .snip1582.hover {
+            background-color: #c47135;
+        }
+
+        .snip1582:hover:before,
+        .snip1582.hover:before,
+        .snip1582:hover:after,
+        .snip1582.hover:after {
+            height: 100%;
+            width: 100%;
+        }
+
         /* ---------------------------------------------------
             SIDEBAR STYLE
         ----------------------------------------------------- */
@@ -216,10 +277,10 @@
             color: red;
         }
         #sidebar{
-            background-color: #1aecd3;
+            background-color: #3c8dbc;
         }
         #sidebar ul li.active>a {
-            background-color: #1aecd3;
+            background-color: #c1d6cc;
         }
         #sidebar .sidebar-header {
             background-color: #1aecd3;
@@ -258,37 +319,38 @@
 <!--end-->
 <div class="wrapper">
     <!-- Sidebar  -->
-    <nav id="sidebar">
+    <nav id="sidebar" >
         <div class="sidebar-header">
-            <h3>RESTAURANT-MANAGEMENT</h3>
+            <img src="/resource/img/01.jpg" style="border-radius:50%; width: 100px; height: 100px">
+            <h3>RESTAURANT</h3>
         </div>
         <ul class="list-unstyled components">
             <p>THÔNG TIN</p>
             <li class="active">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TUỲ CHỌN</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
+                 <ul class="collapse list-unstyled" id="homeSubmenu">
                     <li>
-                        <a href="/admin" class="btn btn-outline-light">
+                        <a href="/admin" class="alert alert-primary" role="alert">
                             Trang quản lý
                         </a>
                     </li>
                     <li>
-                        <a href="/profile" class="btn btn-outline-light">
+                        <a href="/profile" class="alert alert-secondary" role="alert">
                             Cá nhân
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="btn btn-outline-light" onclick="report.openModal()">
+                        <a href="javascript:;" class="alert alert-success" role="alert" onclick="report.openModal()">
                             Báo cáo
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="btn btn-outline-light" onclick="notification.openModal()">
+                        <a href="javascript:;" class="alert alert-danger" role="alert" onclick="notification.openModal()">
                             Xem Thông báo
                         </a>
                     </li>
                     <li>
-                        <a href="/logout" class="btn btn-outline-light" >
+                        <a href="/logout" class="alert alert-warning" role="alert" >
                             Thoát
                         </a>
                     </li>
@@ -299,17 +361,76 @@
 
     <!-- Page Content  -->
     <div id="content">
-        <div class="container-fluid">
-            <button style="background-color: #1aecd3" type="button" id="sidebarCollapse" class="btn btn-outline-dark">
-                <i class="fas fa-align-left"></i>
-                <span>Menu</span>
-            </button>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 01</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 02</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 03</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 04</button>
+            </div>
         </div>
+        <br>
+        <br>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 05</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 06</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 07</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 08</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 09</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 10</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 11</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 12</button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 13</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 14</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 15</button>
+            </div>
+            <div class="btn-group" role="group" aria-label="Third group">
+                <button class="snip1582">Bàn 16</button>
+            </div>
+        </div>
+<!--        <div class="container-fluid">-->
+<!--            <button style="background-color: #1aecd3" type="button" id="sidebarCollapse" class="btn btn-outline-dark">-->
+<!--                <i class="fas fa-align-left"></i>-->
+<!--                <span>Menu</span>-->
+<!--            </button>-->
+<!--        </div>-->
     </div>
 </div>
-
-
-
 
 <!--validator-->
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
