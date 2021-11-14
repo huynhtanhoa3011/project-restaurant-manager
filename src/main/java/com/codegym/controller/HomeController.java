@@ -20,4 +20,10 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView("/user/admin");
         return modelAndView;
     }
+
+    @GetMapping ("/table")
+    private ModelAndView goTable () {
+        ModelAndView modelAndView = new ModelAndView("/layout/table");
+        return modelAndView;
+    }
 }
