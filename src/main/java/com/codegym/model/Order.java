@@ -8,6 +8,8 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.persistence.Table;
 import java.math.BigDecimal;
+import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -20,15 +22,18 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private BigDecimal amount;
-//    private Long table_id;
-//    private Long user_id;
+    private BigDecimal total;
+    private Date createAt;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "table_id", referencedColumnName = "id", nullable = false)
     private Tables table;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id", nullable = false)
     private User user;
+
+    @OneToMany (mappedBy = "order",fetch = FetchType.EAGER)
+    private Set<OrderDetail> orderDetails;
+
 }

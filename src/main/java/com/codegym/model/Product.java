@@ -19,12 +19,9 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
     private String name;
     private BigDecimal price;
-    private String status;
-//    private Long category_id;
-
+    private Boolean status;
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id", nullable = false)
     private Category category;

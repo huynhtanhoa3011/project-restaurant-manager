@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -31,4 +32,7 @@ public class User {
     @ManyToOne
     @JoinColumn (name = "role_id", referencedColumnName = "id", nullable = false)
     private Role role;
+
+    @OneToMany (mappedBy = "user",fetch = FetchType.EAGER)
+    private Set<Order> orders;
 }
