@@ -26,4 +26,16 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView("/layout/table");
         return modelAndView;
     }
+
+    @GetMapping ("/catogory")
+    private ModelAndView goCatogory () {
+        ModelAndView modelAndView = new ModelAndView("/layout/catogory");
+        return modelAndView;
+    }
+
+    @GetMapping ("/product")
+    private ModelAndView goProduct () {
+        ModelAndView modelAndView = new ModelAndView("/layout/product");
+        return modelAndView;
+    }
 }
