@@ -8,16 +8,17 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/resource/js/admin/admin.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="/resource/css/home/home.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- Our Custom CSS -->
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="/resource/js/admin/admin.css">
+
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 </head>
 <body>
 <!--preloader-->
@@ -29,37 +30,36 @@
 <!--end-->
 <div class="wrapper">
     <!-- Sidebar  -->
-    <nav id="sidebar">
+    <nav id="sidebar" >
         <div class="sidebar-header">
-            <h3>RESTAURANT-MANAGEMENT</h3>
+            <img src="/resource/img/01.jpg" style="border-radius:50%; width: 100px; height: 100px">
+            <h3>RESTAURANT</h3>
         </div>
-        <ul class="list-unstyled components">
-            <p>THÔNG TIN</p>
+        <ul class="list components">
             <li class="active">
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">TUỲ CHỌN</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
+                <ul style="list-style-type: none !important;">
                     <li>
-                        <a href="/admin" class="btn btn-outline-light">
+                        <a href="/admin" class="alert alert-danger" role="alert">
                             Trang quản lý
                         </a>
                     </li>
                     <li>
-                        <a href="/table" class="btn btn-outline-light" onclick="createTable()">
-                            Thêm Bàn
+                        <a href="/profile" class="alert alert-danger" role="alert">
+                            Cá nhân
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="btn btn-outline-light" onclick="report.openModal()">
-                            Thêm Danh Mục
+                        <a href="javascript:;" class="alert alert-danger" role="alert" onclick="report.openModal()">
+                            Báo cáo
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;" class="btn btn-outline-light" onclick="notification.openModal()">
-                            Thêm Món Ăn
+                        <a href="javascript:;" class="alert alert-danger" role="alert" onclick="notification.openModal()">
+                            Xem Thông báo
                         </a>
                     </li>
                     <li>
-                        <a href="/logout" class="btn btn-outline-light" >
+                        <a href="/logout" class="alert alert-danger" role="alert" >
                             Thoát
                         </a>
                     </li>
@@ -69,46 +69,15 @@
     </nav>
 
     <!-- Page Content  -->
-    <div id="content">
-        <div class="container-fluid">
-            <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
-                <i class="fas fa-align-left"></i>
-                <span>Menu</span>
-            </button>
-        </div>
-    </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <table class="table table-hover">
-            <thead>
-                <tr style="background-color:  #1aecd3">
-                    <th>#</th>
-                    <th>Tên Nhân Viên</th>
-                    <th>Thời gian</th>
-                    <th>Số tiền</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="doanh_thu">
-                <tr>
-                    <td>1</td>
-                    <td>Nguyễn Văn A</td>
-                    <td>2021-11-13</td>
-                    <td>1000.000 vnđ</td>
-                    <td><button class="btn btn-outline-primary">Kiểm tra chi tiết</button></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
 <!--validator-->
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
 <!--bootbox-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script>
 <!--Notify-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js" integrity="sha512-efUTj3HdSPwWJ9gjfGR71X9cvsrthIA78/Fvd/IN+fttQVy7XWkOAXb295j8B3cmm/kFKVxjiNYzKw9IQJHIuQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
 <!-- Popper.JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <!-- Bootstrap JS -->
@@ -116,11 +85,12 @@
 <!-- jQuery Custom Scroller CDN -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
-
+<!--Jquery-->
 <script type="text/javascript">
     <!--    template-->
     $(document).ready(function () {
         $('#af-preloader').delay(500).fadeOut('slow')
+
         $('#sidebarCollapse').on('click', function () {
             $('#sidebar, #content').toggleClass('active');
             $('.collapse.in').toggleClass('in');
