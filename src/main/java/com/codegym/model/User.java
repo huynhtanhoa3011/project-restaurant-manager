@@ -28,11 +28,7 @@ public class User {
     private String address;
     private String phone;
     private String status;
-
-    @ManyToOne
-    @JoinColumn (name = "role_id", referencedColumnName = "id", nullable = false)
-    private Role role;
-
+    private String role;
     @OneToMany (mappedBy = "user",fetch = FetchType.EAGER)
     private Set<Order> orders;
 }
