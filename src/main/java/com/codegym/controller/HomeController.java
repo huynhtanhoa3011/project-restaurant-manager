@@ -38,4 +38,10 @@ public class HomeController {
         ModelAndView modelAndView = new ModelAndView("/layout/product");
         return modelAndView;
     }
+    @GetMapping ("/staff")
+    private ModelAndView goStaff () {
+        ModelAndView modelAndView = new ModelAndView("/layout/staff");
+        return modelAndView;
+    }
+
 }
